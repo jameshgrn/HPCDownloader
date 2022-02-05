@@ -5,7 +5,7 @@ from utils1 import *
 import ee
 ee.Initialize()
 
-aid = 8
+aid = 2
 
 single_avulsion, aid, channel_width = data_loader(aid = aid)
 out_path = "AvulsionDataStore"
