@@ -2,13 +2,8 @@ import warnings
 warnings.filterwarnings('ignore')
 import numpy as np
 import pandas as pd
-import datetime as dt
-import matplotlib.pyplot as plt
-import cartopy.crs as ccrs
 import h5py
-import scipy
 from astropy.time import Time
-#from icepyx import icesat2data as ipd
 
 
 def getATL03(f,beam):
