@@ -96,7 +96,7 @@ def bufferpoints(out_tiff, aid):
         df = pd.DataFrame()
         buffer_points = gpd.GeoDataFrame(df, geometry = gpd.points_from_xy(interest[0], interest[1]), crs = "epsg:4326")
         buffer_points.to_feather(os.path.join(base_path, '_AID_buffer_' + str(aid) + '.feather'))
-        buffer_points_max_area = buffer_points.explode()
+        buffer_points_max_area = buffer_points.explode(index_parts=True)
         buffer_points_max_area = gpd.GeoDataFrame(index = [0], crs = 'epsg:4326', geometry = [
             max(buffer_points_max_area.geometry, key = lambda a: a.area)])
         max_area_path = buff_max_fp
