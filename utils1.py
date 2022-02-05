@@ -16,7 +16,7 @@ import os
 
 
 def data_loader(aid):
-    avulsion_gdf = gpd.read_feather("/Users/jakegearon/PycharmProjects/LocalAnalysis/local_sr/base_data/AvulsionData.feather")
+    avulsion_gdf = gpd.read_feather("base_data/AvulsionData.feather")
     if aid:
         single_avulsion = avulsion_gdf.query("AID == {}".format(str(aid)))
         channel_width = single_avulsion.channel_width  # single_avulsion.channel_width
